@@ -18,6 +18,10 @@ Conecte o repositório GitHub à Netlify e configure em Site configuration > Env
 
 Build command: `npm run build`; publish directory: `dist`.
 
+## Modo demonstração
+
+Se `VITE_SUPABASE_URL` e `VITE_SUPABASE_ANON_KEY` não estiverem configuradas, o aplicativo abre em modo demonstração, com dados fictícios que não são salvos (somem ao recarregar a página). Assim que as variáveis forem configuradas e o site publicado novamente, o login do Supabase e os dados reais passam a ser usados.
+
 ## Banco de dados esperado
 
 Usa as tabelas `customers`, `services` e `quotes` criadas no projeto Supabase. Cada inserção inclui o `user_id` da sessão; as políticas RLS do banco devem continuar habilitadas. Nunca use a chave `service_role` ou `secret` no navegador.
